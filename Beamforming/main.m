@@ -137,3 +137,12 @@ end
 %% Part L
 
 %% Question 4
+close all;
+N0 = 100;
+mu = 1/max(D);
+e = lmsMVDR(r, [20, -20], Bpower(2), Vpower, N, N0, mu);
+n = 1:N0;
+figure;
+hold on
+plot(n, mean(abs(e).^2, 1));
+hold off
